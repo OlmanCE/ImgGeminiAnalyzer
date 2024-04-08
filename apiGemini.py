@@ -10,7 +10,6 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Limita el tamaño del arc
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
 
-
 @app.route('/analyze-image', methods=['POST'])
 def analyze_image():
     if 'image' not in request.files:
